@@ -57,43 +57,82 @@
     <p>At Shirakawa Jidousha, we specialize in providing high-quality used cars and reliable maintenance services. Our mission is to deliver cars you can trust and maintenance that keeps your vehicle safe and long-lasting. We value transparency, quality, and customer satisfaction.</p>
 </section>
 
-<section id="cars">
-    <h2>中古車販売 / Cars for Sale</h2>
-    <div class="cars-container">
-        <!-- Example car cards -->
-        <div class="car-card">
-            <img src="IMG_4434.jpg" alt="front view">
-            <img src="IMG_4436.jpg" alt="back view">
-            <img src="IMG_4435.jpg" alt="side view">
-            <img src="IMG_4429.jpg" alt="side view">
-            <img src="IMG_4430.jpg" alt="damaged area">
-            <img src="IMG_4421.jpg" alt="interior">
-            <img src="IMG_4422.jpg" alt="interior">
-            <img src="IMG_4423.jpg" alt="interior">
+section id="cars">
+ <h2>中古車販売 / Cars for Sale</h2>
+ <div class="cars-container">
+ <div class="car-card">
+ <h3>ダイハツ ムーヴ コンテ カスタムG / Daihatsu Move Conte Custom G (2014年)</h3>
+ <p>型式 / Model: DBA-L585S</p>
+ <p>排気量 / Engine: 660cc / AT / 4WD</p>
+ <p>カラー / Color: ブラック / Black</p>
+ <p>走行距離 / Mileage: 82,800 km</p>
+ <p>車検 / Shaken: 令和9年2月まで / Until Feb 2027</p>
 
-            <div class="info">
-                <h3>ダイハツ ムーヴ コンテ / Daihatsu Move Conte</h3>
-                <p>年式 / Year: 2014</p>
-                <p>価格 / Price: ¥135,000</p>
-            </div>
-        </div>
-       
+ <div class="car-images">
+ <img src="IMG_4434.jpg" alt="front view">
+ <img src="IMG_4436.jpg" alt="back view">
+ <img src="IMG_4435.jpg" alt="side view">
+ <img src="IMG_4429.jpg" alt="side view">
+ <img src="IMG_4430.jpg" alt="damaged area">
+ <img src="IMG_4421.jpg" alt="interior">
+ <img src="IMG_4422.jpg" alt="interior">
+ <img src="IMG_4423.jpg" alt="interior">
+ </div>
 
+ <h4>状態 / Condition</h4>
+ <ul>
+ <li>事故歴あり – 左側面に大きな凹み・キズあり / Accident history – large dent & scratches on left side (see photos)</li>
+ <li>修理が必要なため現状販売 / Sold as-is for repair</li>
+ <li>室内はとてもきれい / Interior is very clean</li>
+ </ul>
+
+ <h4>装備 / Features</h4>
+ <ul>
+ <li>純正ナビ・フルセグTV / Stock navigation & full-segment TV</li>
+ <li>HIDヘッドライト / HID headlights</li>
+ <li>エコアイドル / Eco-idle</li>
+ <li>純正アルミホイール / Stock alloy wheels</li>
+ <li>エアコン / ABS / エアバッグ / Aircon / ABS / Airbags</li>
+ </ul>
+
+ <h4>セールスポイント / Selling Points</h4>
+ <ul>
+ <li> エンジン始動・走行可能 / Engine starts and drives</li>
+ <li> 室内きれい / Clean interior</li>
+ <li> 車検付き（令和9年2月まで） / Shaken included (until Feb 2027)</li>
+ <li> 修理ベースや部品取りに最適 / Great for repair or parts</li>
+ <li>実車を確認の上でご判断ください / Please check the car in person</li>
+ <li>価格は多少の交渉可能 / Price negotiable</li>
+ <li>※現状販売のため、ノークレーム・ノーリターン / Sold as-is, no claims or returns</li>
+ </ul>
+ </div>
+ </div>
 </section>
 
-<section id="contact">
-    <h2>お問い合わせ / Contact</h2>
-    <div class="contact-info">
-        <p>電話 / Phone: <a href="tel:08055411462">080-5541-1462</a></p>
-        <p>Email: <a href="mailto:akramyen@gmail.com">akramyen@gmail.com</a></p>
-        <p>住所 / Address: Oyama City, Tochigi</p>
-        <p>地図 / Map: <a href="https://www.google.com/maps/search/?api=1&query=Oyama+City+Tochigi" target="_blank">Googleマップで確認 / View on Google Maps</a></p>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Shirakawa Jidousha (白川自動車). All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+<style>
+.cars-container {
+ display: flex;
+ justify-content: center;
+}
+.car-images {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+ margin-top: 10px;
+}
+.car-images img {
+ width: calc(33% - 10px); /* 3 images per row on desktop */
+ border-radius: 5px;
+ object-fit: cover;
+}
+@media(max-width: 600px) {
+ .car-images img {
+ width: 48%; /* 2 images per row on mobile */
+ }
+}
+ul {
+ margin-top: 5px;
+ margin-bottom: 15px;
+ padding-left: 20px;
+}
+</style>
