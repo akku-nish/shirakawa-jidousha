@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirakawa Jidousha (白川自動車)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #f5f5f5; color: #333; }
+        header { background-color: #004aad; color: #fff; padding: 25px 0; text-align: center; }
+        header h1 { font-size: 2.5em; }
+        nav { background-color: #003377; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav a { color: #fff; padding: 15px 25px; text-decoration: none; font-weight: bold; }
+        nav a:hover { background-color: #002244; transition: 0.3s; }
+        section { padding: 50px 20px; max-width: 1100px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h2 { color: #004aad; margin-bottom: 20px; font-size: 2em; }
+        p { margin-bottom: 15px; font-size: 1.1em; }
+        .cars-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
+        .car-card { flex: 1 1 calc(33% - 20px); background: #f9f9f9; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .car-card:hover { transform: translateY(-5px); }
+        .car-card img { width: 100%; height: 200px; object-fit: cover; }
+        .car-card .info { padding: 15px; }
+        .car-card h3 { margin-bottom: 10px; color: #003377; }
+        .car-card p { margin: 5px 0; }
+        .contact-info p { margin-bottom: 10px; font-size: 1.1em; }
+        .btn { display: inline-block; padding: 10px 20px; background-color: #004aad; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background-color: #002244; }
+        footer { background-color: #003377; color: #fff; text-align: center; padding: 20px 0; margin-top: 20px; }
+        @media(max-width: 992px){ .car-card { flex: 1 1 calc(50% - 20px); } }
+        @media(max-width: 600px){ .car-card { flex: 1 1 100%; } nav { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shirakawa Jidousha (白川自動車)</h1>
+</header>
+
+<nav>
+    <a href="#home">ホーム / Home</a>
+    <a href="#about">会社概要 / About Us</a>
+    <a href="#cars">中古車販売 / Cars for Sale</a>
+    <a href="#contact">お問い合わせ / Contact</a>
+</nav>
+
+<section id="home">
+    <h2>ようこそ！ / Welcome!</h2>
+    <p>Shirakawa Jidoushaでは、高品質な中古車の販売と信頼できる自動車修理サービスを提供しています。お客様の安全で快適なカーライフをサポートいたします。</p>
+    <p>At Shirakawa Jidousha, we provide high-quality used cars and reliable auto repair services. We ensure your car is safe and running smoothly.</p>
+    <a class="btn" href="#cars">在庫車を見る / View Cars</a>
+</section>
+
+<section id="about">
+    <h2>会社概要 / About Us</h2>
+    <p>Shirakawa Jidoushaでは、高品質な中古車の販売と信頼できる修理サービスを専門に提供しています。私たちの使命は、お客様に安心して選べる車と、長く安全に乗れるメンテナンスをお届けすることです。透明性、品質、顧客満足を大切にしています。</p>
+    <p>At Shirakawa Jidousha, we specialize in providing high-quality used cars and reliable maintenance services. Our mission is to deliver cars you can trust and maintenance that keeps your vehicle safe and long-lasting. We value transparency, quality, and customer satisfaction.</p>
+</section>
+
+<section id="cars">
+    <h2>中古車販売 / Cars for Sale</h2>
+    <div class="cars-container">
+        <!-- Example car cards -->
+        <div class="car-card">
+            <img src="car1.jpg" alt="Car 1">
+            <div class="info">
+                <h3>トヨタ プリウス / Toyota Prius</h3>
+                <p>年式 / Year: 2016</p>
+                <p>価格 / Price: ¥1,200,000</p>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="car2.jpg" alt="Car 2">
+            <div class="info">
+                <h3>日産 ノート / Nissan Note</h3>
+                <p>年式 / Year: 2017</p>
+                <p>価格 / Price: ¥950,000</p>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="car3.jpg" alt="Car 3">
+            <div class="info">
+                <h3>ホンダ フィット / Honda Fit</h3>
+                <p>年式 / Year: 2018</p>
+                <p>価格 / Price: ¥1,050,000</p>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="car4.jpg" alt="Car 4">
+            <div class="info">
+                <h3>スズキ ワゴンR / Suzuki Wagon R</h3>
+                <p>年式 / Year: 2015</p>
+                <p>価格 / Price: ¥700,000</p>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="car5.jpg" alt="Car 5">
+            <div class="info">
+                <h3>ダイハツ タント / Daihatsu Tanto</h3>
+                <p>年式 / Year: 2016</p>
+                <p>価格 / Price: ¥800,000</p>
+            </div>
+        </div>
+        <div class="car-card">
+            <img src="car6.jpg" alt="Car 6">
+            <div class="info">
+                <h3>マツダ デミオ / Mazda Demio</h3>
+                <p>年式 / Year: 2017</p>
+                <p>価格 / Price: ¥900,000</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>お問い合わせ / Contact</h2>
+    <div class="contact-info">
+        <p>電話 / Phone: <a href="tel:08055411462">080-5541-1462</a></p>
+        <p>Email: <a href="mailto:akramyen@gmail.com">akramyen@gmail.com</a></p>
+        <p>住所 / Address: Oyama City, Tochigi</p>
+        <p>地図 / Map: <a href="https://www.google.com/maps/search/?api=1&query=Oyama+City+Tochigi" target="_blank">Googleマップで確認 / View on Google Maps</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Shirakawa Jidousha (白川自動車). All rights reserved.</p>
+</footer>
+
+</body>
+</html>
