@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shirakawa Jidousha - 中古車販売</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: #333;
+}
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h2, h3, h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.cars-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.car-card {
+    margin-bottom: 30px;
+}
+.car-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.car-images img {
+    width: calc(33% - 10px);
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.car-images img:hover {
+    opacity: 0.8;
+}
+@media(max-width: 600px) {
+    .car-images img {
+        width: 48%;
+    }
+}
+ul {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+.contact-info p {
+    margin: 5px 0;
+}
+a {
+    color: #004080;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>白川自動車 / Shirakawa Jidousha</h1>
+    <p>中古車販売・修理 / Used Cars Sales & Repairs</p>
+</header>
+
+<section>
+    <h2>中古車販売 / Cars for Sale</h2>
+    <div class="cars-container">
+        <div class="car-card">
+            <h3>ダイハツ ムーヴ コンテ カスタムG / Daihatsu Move Conte Custom G (2014年)</h3>
+            <p>型式 / Model: DBA-L585S</p>
+            <p>排気量 / Engine: 660cc / AT / 4WD</p>
+            <p>カラー / Color: ブラック / Black</p>
+            <p>走行距離 / Mileage: 82,800 km</p>
+            <p>車検 / Shaken: 令和9年2月まで / Until Feb 2027</p>
+
+            <div class="car-images">
+                <img src="IMG_4434.jpg" alt="front view" class="popup-image">
+                <img src="IMG_4436.jpg" alt="back view" class="popup-image">
+                <img src="IMG_4435.jpg" alt="side view" class="popup-image">
+                <img src="IMG_4429.jpg" alt="side view" class="popup-image">
+                <img src="IMG_4430.jpg" alt="damaged area" class="popup-image">
+                <img src="IMG_4421.jpg" alt="interior" class="popup-image">
+                <img src="IMG_4422.jpg" alt="interior" class="popup-image">
+                <img src="IMG_4423.jpg" alt="interior" class="popup-image">
+            </div>
+
+            <h4>状態 / Condition</h4>
+            <ul>
+                <li>事故歴あり – 左側面に大きな凹み・キズあり / Accident history – large dent & scratches on left side (see photos)</li>
+                <li>修理が必要なため現状販売 / Sold as-is for repair</li>
+                <li>室内はとてもきれい / Interior is very clean</li>
+            </ul>
+
+            <h4>装備 / Features</h4>
+            <ul>
+                <li>純正ナビ・フルセグTV / Stock navigation & full-segment TV</li>
+                <li>HIDヘッドライト / HID headlights</li>
+                <li>エコアイドル / Eco-idle</li>
+                <li>純正アルミホイール / Stock alloy wheels</li>
+                <li>エアコン / ABS / エアバッグ / Aircon / ABS / Airbags</li>
+            </ul>
+
+            <h4>セールスポイント / Selling Points</h4>
+            <ul>
+                <li>✅ エンジン始動・走行可能 / Engine starts and drives</li>
+                <li>✅ 室内きれい / Clean interior</li>
+                <li>✅ 車検付き（令和9年2月まで） / Shaken included (until Feb 2027)</li>
+                <li>✅ 修理ベースや部品取りに最適 / Great for repair or parts</li>
+                <li>実車を確認の上でご判断ください / Please check the car in person</li>
+                <li>価格は多少の交渉可能 / Price negotiable</li>
+                <li>※現状販売のため、ノークレーム・ノーリターン / Sold as-is, no claims or returns</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+</div>
+
+<section id="contact">
+    <h2>お問い合わせ / Contact</h2>
+    <div class="contact-info">
+        <p>電話 / Phone: <a href="tel:08055411462">080-5541-1462</a></p>
+        <p>Email: <a href="mailto:akramyen@gmail.com">akramyen@gmail.com</a></p>
+        <p>住所 / Address: Oyama City, Tochigi</p>
+        <p>地図 / Map: <a href="https://www.google.com/maps/search/?api=1&query=Oyama+City+Tochigi" target="_blank">Googleマップで確認 / View on Google Maps</a></p>
+    </div>
+</section>
+
+<script>
+// Lightbox functionality
+const images = document.querySelectorAll('.popup-image');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+
+function closeLightbox() {
+    lightbox.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
