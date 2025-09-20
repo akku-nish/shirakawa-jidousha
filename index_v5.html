@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shirakawa Jidousha - 中古車販売</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+header {
+    background-color: #004080;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2, h3, h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.car-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.car-card {
+    width: 220px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+    background-color: #fff;
+}
+.car-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.car-card img {
+    width: 100%;
+    display: block;
+}
+.car-card h3 {
+    font-size: 16px;
+    padding: 10px;
+}
+.car-detail {
+    display: none;
+    margin-top: 30px;
+}
+.car-detail.active {
+    display: block;
+}
+.car-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.car-images img {
+    width: calc(33% - 10px);
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.car-images img:hover {
+    opacity: 0.8;
+}
+@media(max-width: 600px) {
+    .car-images img {
+        width: 48%;
+    }
+    .car-card {
+        width: 48%;
+    }
+}
+ul {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+.intro {
+    text-align: center;
+    padding: 30px 20px;
+}
+.intro h2 {
+    margin-bottom: 10px;
+}
+.intro p {
+    font-size: 16px;
+}
+.sold {
+    color: red;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>白川自動車 / Shirakawa Jidousha</h1>
+    <p>中古車販売・修理 / Used Cars Sales & Repairs</p>
+</header>
+
+<section class="intro">
+    <h2>ようこそ / Welcome</h2>
+    <p>白川自動車では高品質な中古車を販売しております。<br>
+       また、修理・メンテナンスも承っております。お気軽にお問い合わせください。</p>
+</section>
+
+<section>
+    <h2>中古車一覧 / Cars for Sale</h2>
+    <div class="car-grid">
+        <!-- Car 1 card -->
+        <div class="car-card" onclick="showDetail('car1')">
+            <img src="IMG_4434.jpg" alt="Daihatsu Move Conte Front View">
+            <h3>ダイハツ ムーヴ コンテ カスタムG (2014)</h3>
+        </div>
+
+        <!-- Car 2 card -->
+        <div class="car-card" onclick="showDetail('car2')">
+            <img src="IMG_4282.jpg" alt="Daihatsu Mira Cocoa Front View">
+            <h3>ダイハツ ミラ ココア プラスG (2012) <span class="sold">SOLD OUT</span></h3>
+        </div>
+    </div>
+</section>
+
+<!-- Car 1 Details -->
+<section id="car1" class="car-detail">
+    <h2>ダイハツ ムーヴ コンテ カスタムG / Daihatsu Move Conte Custom G (2014年)</h2>
+    <p>型式 / Model: DBA-L585S | 排気量 / Engine: 660cc / AT / 4WD | カラー / Color: ブラック | 走行距離 / Mileage: 82,800 km | 車検 / Shaken: 令和9年2月まで</p>
+    <div class="car-images">
+        <img src="IMG_4434.jpg" alt="Front View" class="popup-image">
+        <img src="IMG_4436.jpg" alt="Back View" class="popup-image">
+        <img src="IMG_4435.jpg" alt="Side View" class="popup-image">
+        <img src="IMG_4429.jpg" alt="Side View" class="popup-image">
+        <img src="IMG_4430.jpg" alt="Damaged Area" class="popup-image">
+        <img src="IMG_4421.jpg" alt="Interior" class="popup-image">
+        <img src="IMG_4422.jpg" alt="Interior" class="popup-image">
+        <img src="IMG_4423.jpg" alt="Interior" class="popup-image">
+    </div>
+    <h3>状態 / Condition</h3>
+    <ul>
+        <li>事故歴あり – 左側面に大きな凹み・キズあり / Accident history – see photos</li>
+        <li>修理が必要なため現状販売 / Sold as-is for repair</li>
+        <li>室内はとてもきれい / Interior is very clean</li>
+    </ul>
+</section>
+
+<!-- Car 2 Details -->
+<section id="car2" class="car-detail">
+    <h2>ダイハツ ミラ ココア プラスG / Daihatsu Mira Cocoa Plus G (2012年) <span class="sold">SOLD OUT</span></h2>
+    <p>型式 / Model: 2012年11月 | 排気量 / Engine: 660cc | 走行距離 / Mileage: 176,000 km | カラー / Color: ピンク</p>
+    <div class="car-images">
+        <img src="IMG_4282.jpg" alt="Front View" class="popup-image">
+        <img src="IMG_4275.jpg" alt="Other view" class="popup-image">
+        <img src="IMG_4280.jpg" alt="Side View" class="popup-image">
+        <img src="IMG_4225.jpg" alt="Interior" class="popup-image">
+        <img src="IMG_4278.jpg" alt="Dashboard" class="popup-image">
+    </div>
+    <h3>🛠 Recent Maintenance & Upgrades</h3>
+    <ul>
+        <li>Cleaned and sanitized</li>
+        <li>Headlights upgraded from halogen to LED</li>
+        <li>New drive recorder (dashcam) installed</li>
+        <li>New battery replaced 🔋</li>
+        <li>Interior LED lights installed</li>
+        <li>Exterior & headlights polished (shaken-ready) ✨</li>
+        <li>✅ Car is ready and eligible to pass inspection</li>
+    </ul>
+    <h3>🎁 Features & Options</h3>
+    <ul>
+        <li>TV & Navigation 📺🗺</li>
+        <li>ETC (Electronic Toll Collection)</li>
+        <li>Automatic emergency braking system 🛑</li>
+        <li>Rear and front seats fold completely flat → can be used as emergency sleeping space 🛏️</li>
+        <li>Fuel efficiency: 20–22 km/L</li>
+        <li>Air Conditioning / Power Steering / Power Windows</li>
+    </ul>
+</section>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+</div>
+
+<section id="contact">
+    <h2>お問い合わせ / Contact</h2>
+    <div class="contact-info">
+        <p>電話 / Phone: <a href="tel:08055411462">080-5541-1462</a></p>
+        <p>Email: <a href="mailto:akramyen@gmail.com">akramyen@gmail.com</a></p>
+        <p>住所 / Address: Oyama City, Tochigi</p>
+        <p>地図 / Map: <a href="https://www.google.com/maps/search/?api=1&query=Oyama+City+Tochigi" target="_blank">Googleマップで確認 / View on Google Maps</a></p>
+    </div>
+</section>
+
+<script>
+// Show car details when card is clicked
+function showDetail(carId) {
+    document.querySelectorAll('.car-detail').forEach(d => d.classList.remove('active'));
+    const section = document.getElementById(carId);
+    section.classList.add('active');
+    section.scrollIntoView({behavior: "smooth"});
+}
+
+// Lightbox for images
+document.querySelectorAll('.popup-image').forEach(img => {
+    img.addEventListener('click', () => {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+function closeLightbox() {
+    document
