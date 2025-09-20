@@ -16,12 +16,16 @@ body {
 header {
     background-color: #004080;
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
 }
-h2, h3, h4 {
-    margin-top: 15px;
-    margin-bottom: 10px;
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+header p {
+    margin: 0;
+    font-size: 16px;
 }
 section {
     padding: 20px;
@@ -30,6 +34,10 @@ section {
     max-width: 1000px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2, h3, h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 .cars-container {
     display: flex;
@@ -75,7 +83,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-/* Lightbox */
 #lightbox {
     display: none;
     position: fixed;
@@ -93,6 +100,16 @@ a:hover {
     max-height: 90%;
     border-radius: 8px;
 }
+.intro {
+    text-align: center;
+    padding: 30px 20px;
+}
+.intro h2 {
+    margin-bottom: 10px;
+}
+.intro p {
+    font-size: 16px;
+}
 </style>
 </head>
 <body>
@@ -101,6 +118,12 @@ a:hover {
     <h1>白川自動車 / Shirakawa Jidousha</h1>
     <p>中古車販売・修理 / Used Cars Sales & Repairs</p>
 </header>
+
+<section class="intro">
+    <h2>ようこそ / Welcome</h2>
+    <p>白川自動車では高品質な中古車を販売しております。<br>
+       また、修理・メンテナンスも承っております。お気軽にお問い合わせください。</p>
+</section>
 
 <section>
     <h2>中古車販売 / Cars for Sale</h2>
@@ -154,7 +177,6 @@ a:hover {
     </div>
 </section>
 
-<!-- Lightbox overlay -->
 <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="">
 </div>
