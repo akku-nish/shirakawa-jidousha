@@ -3,136 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shirakawa Jidousha (白川自動車)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Shirakawa Jidousha - 中古車販売</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #f5f5f5; color: #333; }
-        header { background-color: #004aad; color: #fff; padding: 25px 0; text-align: center; }
-        header h1 { font-size: 2.5em; }
-        nav { background-color: #003377; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav a { color: #fff; padding: 15px 25px; text-decoration: none; font-weight: bold; }
-        nav a:hover { background-color: #002244; transition: 0.3s; }
-        section { padding: 50px 20px; max-width: 1100px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        h2 { color: #004aad; margin-bottom: 20px; font-size: 2em; }
-        p { margin-bottom: 15px; font-size: 1.1em; }
-        .cars-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
-        .car-card { flex: 1 1 calc(33% - 20px); background: #f9f9f9; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .car-card:hover { transform: translateY(-5px); }
-        .car-card img { width: 100%; height: 200px; object-fit: cover; }
-        .car-card .info { padding: 15px; }
-        .car-card h3 { margin-bottom: 10px; color: #003377; }
-        .car-card p { margin: 5px 0; }
-        .contact-info p { margin-bottom: 10px; font-size: 1.1em; }
-        .btn { display: inline-block; padding: 10px 20px; background-color: #004aad; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background-color: #002244; }
-        footer { background-color: #003377; color: #fff; text-align: center; padding: 20px 0; margin-top: 20px; }
-        @media(max-width: 992px){ .car-card { flex: 1 1 calc(50% - 20px); } }
-        @media(max-width: 600px){ .car-card { flex: 1 1 100%; } nav { flex-direction: column; } }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h2, h3, h4 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        section {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 1000px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .cars-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .car-card {
+            margin-bottom: 30px;
+        }
+        .car-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .car-images img {
+            width: calc(33% - 10px);
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        @media(max-width: 600px) {
+            .car-images img {
+                width: 48%;
+            }
+        }
+        ul {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Shirakawa Jidousha (白川自動車)</h1>
+    <h1>白川自動車 / Shirakawa Jidousha</h1>
+    <p>中古車販売・修理 / Used Cars Sales & Repairs</p>
 </header>
 
-<nav>
-    <a href="#home">ホーム / Home</a>
-    <a href="#about">会社概要 / About Us</a>
-    <a href="#cars">中古車販売 / Cars for Sale</a>
-    <a href="#contact">お問い合わせ / Contact</a>
-</nav>
+<section id="cars">
+    <h2>中古車販売 / Cars for Sale</h2>
+    <div class="cars-container">
+        <div class="car-card">
+            <h3>ダイハツ ムーヴ コンテ カスタムG / Daihatsu Move Conte Custom G (2014年)</h3>
+            <p>型式 / Model: DBA-L585S</p>
+            <p>排気量 / Engine: 660cc / AT / 4WD</p>
+            <p>カラー / Color: ブラック / Black</p>
+            <p>走行距離 / Mileage: 82,800 km</p>
+            <p>車検 / Shaken: 令和9年2月まで / Until Feb 2027</p>
 
-<section id="home">
-    <h2>ようこそ！ / Welcome!</h2>
-    <p>Shirakawa Jidoushaでは、高品質な中古車の販売と信頼できる自動車修理サービスを提供しています。お客様の安全で快適なカーライフをサポートいたします。</p>
-    <p>At Shirakawa Jidousha, we provide high-quality used cars and reliable auto repair services. We ensure your car is safe and running smoothly.</p>
-    <a class="btn" href="#cars">在庫車を見る / View Cars</a>
+            <div class="car-images">
+                <img src="IMG_4434.jpg" alt="front view">
+                <img src="IMG_4436.jpg" alt="back view">
+                <img src="IMG_4435.jpg" alt="side view">
+                <img src="IMG_4429.jpg" alt="side view">
+                <img src="IMG_4430.jpg" alt="damaged area">
+                <img src="IMG_4421.jpg" alt="interior">
+                <img src="IMG_4422.jpg" alt="interior">
+                <img src="IMG_4423.jpg" alt="interior">
+            </div>
+
+            <h4>状態 / Condition</h4>
+            <ul>
+                <li>事故歴あり – 左側面に大きな凹み・キズあり / Accident history – large dent & scratches on left side (see photos)</li>
+                <li>修理が必要なため現状販売 / Sold as-is for repair</li>
+                <li>室内はとてもきれい / Interior is very clean</li>
+            </ul>
+
+            <h4>装備 / Features</h4>
+            <ul>
+                <li>純正ナビ・フルセグTV / Stock navigation & full-segment TV</li>
+                <li>HIDヘッドライト / HID headlights</li>
+                <li>エコアイドル / Eco-idle</li>
+                <li>純正アルミホイール / Stock alloy wheels</li>
+                <li>エアコン / ABS / エアバッグ / Aircon / ABS / Airbags</li>
+            </ul>
+
+            <h4>セールスポイント / Selling Points</h4>
+            <ul>
+                <li>✅ エンジン始動・走行可能 / Engine starts and drives</li>
+                <li>✅ 室内きれい / Clean interior</li>
+                <li>✅ 車検付き（令和9年2月まで） / Shaken included (until Feb 2027)</li>
+                <li>✅ 修理ベースや部品取りに最適 / Great for repair or parts</li>
+                <li>実車を確認の上でご判断ください / Please check the car in person</li>
+                <li>価格は多少の交渉可能 / Price negotiable</li>
+                <li>※現状販売のため、ノークレーム・ノーリターン / Sold as-is, no claims or returns</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<section id="about">
-    <h2>会社概要 / About Us</h2>
-    <p>Shirakawa Jidoushaでは、高品質な中古車の販売と信頼できる修理サービスを専門に提供しています。私たちの使命は、お客様に安心して選べる車と、長く安全に乗れるメンテナンスをお届けすることです。透明性、品質、顧客満足を大切にしています。</p>
-    <p>At Shirakawa Jidousha, we specialize in providing high-quality used cars and reliable maintenance services. Our mission is to deliver cars you can trust and maintenance that keeps your vehicle safe and long-lasting. We value transparency, quality, and customer satisfaction.</p>
-</section>
-
-section id="cars">
- <h2>中古車販売 / Cars for Sale</h2>
- <div class="cars-container">
- <div class="car-card">
- <h3>ダイハツ ムーヴ コンテ カスタムG / Daihatsu Move Conte Custom G (2014年)</h3>
- <p>型式 / Model: DBA-L585S</p>
- <p>排気量 / Engine: 660cc / AT / 4WD</p>
- <p>カラー / Color: ブラック / Black</p>
- <p>走行距離 / Mileage: 82,800 km</p>
- <p>車検 / Shaken: 令和9年2月まで / Until Feb 2027</p>
-
- <div class="car-images">
- <img src="IMG_4434.jpg" alt="front view">
- <img src="IMG_4436.jpg" alt="back view">
- <img src="IMG_4435.jpg" alt="side view">
- <img src="IMG_4429.jpg" alt="side view">
- <img src="IMG_4430.jpg" alt="damaged area">
- <img src="IMG_4421.jpg" alt="interior">
- <img src="IMG_4422.jpg" alt="interior">
- <img src="IMG_4423.jpg" alt="interior">
- </div>
-
- <h4>状態 / Condition</h4>
- <ul>
- <li>事故歴あり – 左側面に大きな凹み・キズあり / Accident history – large dent & scratches on left side (see photos)</li>
- <li>修理が必要なため現状販売 / Sold as-is for repair</li>
- <li>室内はとてもきれい / Interior is very clean</li>
- </ul>
-
- <h4>装備 / Features</h4>
- <ul>
- <li>純正ナビ・フルセグTV / Stock navigation & full-segment TV</li>
- <li>HIDヘッドライト / HID headlights</li>
- <li>エコアイドル / Eco-idle</li>
- <li>純正アルミホイール / Stock alloy wheels</li>
- <li>エアコン / ABS / エアバッグ / Aircon / ABS / Airbags</li>
- </ul>
-
- <h4>セールスポイント / Selling Points</h4>
- <ul>
- <li> エンジン始動・走行可能 / Engine starts and drives</li>
- <li> 室内きれい / Clean interior</li>
- <li> 車検付き（令和9年2月まで） / Shaken included (until Feb 2027)</li>
- <li> 修理ベースや部品取りに最適 / Great for repair or parts</li>
- <li>実車を確認の上でご判断ください / Please check the car in person</li>
- <li>価格は多少の交渉可能 / Price negotiable</li>
- <li>※現状販売のため、ノークレーム・ノーリターン / Sold as-is, no claims or returns</li>
- </ul>
- </div>
- </div>
-</section>
-
-<style>
-.cars-container {
- display: flex;
- justify-content: center;
-}
-.car-images {
- display: flex;
- flex-wrap: wrap;
- gap: 10px;
- margin-top: 10px;
-}
-.car-images img {
- width: calc(33% - 10px); /* 3 images per row on desktop */
- border-radius: 5px;
- object-fit: cover;
-}
-@media(max-width: 600px) {
- .car-images img {
- width: 48%; /* 2 images per row on mobile */
- }
-}
-ul {
- margin-top: 5px;
- margin-bottom: 15px;
- padding-left: 20px;
-}
-</style>
+<section id="contact">
+    <h2>お問い合わせ / Contact</h2>
+    <di
